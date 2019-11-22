@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>My Wish List</h1>
+    </header>
+    <main class="container">
+      <div class="row">
+        <div class="col-12">
+          <form onsubmit="app.wishesController.addWish(event)">
+            <div class="form-group">
+              <label for="title">Wish Title</label>
+              <input
+                type="text"
+                class="form-control"
+                id="title"
+                name="title"
+                aria-describedby="wish title"
+                placeholder="Title..."
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="imgUrl">Wish Image URL</label>
+              <input
+                type="url"
+                class="form-control"
+                id="imgUrl"
+                name="imgUrl"
+                aria-describedby="wish URL"
+                placeholder="Img Url..."
+                required
+              />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+      <div class="row" id="wishes"></div>
+    </main>
+    <footer></footer>
+
+    <script src="app/main.js" type="module"></script>
+  </body>
+</html>
