@@ -5,7 +5,6 @@ function _draw() {
   let wishes = store.State.wishes;
   let template = "";
   wishes.forEach(wish => {
-    debugger;
     template += wish.Template;
   });
   document.querySelector("#wishes").innerHTML = template;
@@ -14,6 +13,11 @@ function _draw() {
 //Public
 export default class WishesController {
   constructor() {
+    _draw();
+  }
+
+  removeWish(wishId) {
+    WishesService.removeWish(wishId);
     _draw();
   }
 
